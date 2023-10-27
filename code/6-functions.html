@@ -1,17 +1,20 @@
 <script>
-
   // Functions are a way to store a re-usable snippet of code in a block which can
   // be run later. For example, this function would print the current time when invoked:
+
   const printCurrentTime = () => {
-    const currentTime = new Date()
-    return currentTime.toLocaleTimeString()
-  }
+    const currentTime = new Date();
+    return currentTime.toLocaleTimeString();
+  };
 
   // Task 1: Invoke the printCurrentTime function inside a console.log():
-
+  console.log(printCurrentTime());
 
   // Task 2: Write a function which, when invoked, prints your name. Then invoke it twice.
-
+  const invokeMyName = (myName) => {
+    return myName + " " + myName;
+  };
+  console.log(invokeMyName("Emilia"));
 
   // Task 3: Write a function called `printGreeting`. When invoked using the examples
   // below, it should print "Hello Bob" or "Hello Sue":
@@ -19,6 +22,11 @@
   // printGreeting("Bob") // This should print "Hello Bob"
   // printGreeting("Sue") // This should print "Hello Sue"
 
+  const printGreeting = (helloYou) => {
+    return "Hello " + helloYou;
+  };
+  console.log(printGreeting("Sue"));
+  console.log(printGreeting("Bob"));
 
   // Task 4: Write a function called `multiply` which multiplies two numbers together and returns the value
   // so that it can be stored in a variable. See the example below to see how it should work.
@@ -29,6 +37,11 @@
   // const second = multiply(100, 4)
   // console.log(second) // this should print "400"
 
+  const multiply = (number1, number2) => {
+    return number1 * number2;
+  };
+  const first = multiply(4, 4);
+  console.log(first);
 
   // Task 5: Write a function called `warmEnough` which takes the current temperature as an argument and returns
   // `true` if it is greater than 10 and false otherwise. Comment out the code below to invoke the
@@ -38,7 +51,16 @@
   //   console.log("Go for a run!")
   // }
 
+  const warmEnough = (temperature) => {
+    return temperature > 10;
+  };
 
+  const goForRun = warmEnough(8);
+  if (goForRun) {
+    console.log("Go for a run!");
+  } else {
+    console.log("Stay inside!!!");
+  }
 </script>
 
 <p>Open the console in the browser to see the output of this script.</p>
